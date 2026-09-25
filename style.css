@@ -116,8 +116,14 @@
     object-fit: cover;
   }
 }
-/* Afficher entièrement la 2e photo de la mosaïque */
+
+/* Première ligne de la galerie : plus haute pour préserver les compositions */
+.auteur-aime-grid img:nth-child(1),
 .auteur-aime-grid img:nth-child(2) {
-  object-fit: contain;
-  background: #f7f2e9;
+  height: 380px;
+}
+
+.auteur-aime-grid img:nth-child(2) {
+  object-fit: cover;
+  object-position: center center;
 }
