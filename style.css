@@ -116,3 +116,8 @@
     object-fit: cover;
   }
 }
+/* Afficher entièrement la 2e photo de la mosaïque */
+.auteur-aime-grid img:nth-child(2) {
+  object-fit: contain;
+  background: #f7f2e9;
+}
