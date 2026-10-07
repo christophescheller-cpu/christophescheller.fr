@@ -611,3 +611,15 @@ header { gap: 18px; }
 .book-editions p { margin-bottom: 8px; }
 .edition-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .edition-links a { color: var(--wine); text-underline-offset: 4px; }
+
+.excerpts { scroll-margin-top: 140px; }
+.actions { flex-wrap: wrap; }
+.book-excerpt { border-top: 1px solid #ded5c8; margin-top: 18px; }
+.book-excerpt:last-child { border-bottom: 1px solid #ded5c8; }
+.book-excerpt summary { cursor: pointer; padding: 22px 0; color: var(--wine); font-size: 23px; line-height: 1.3; }
+.book-excerpt summary small { display: block; margin: 7px 0 0 22px; font: 12px Arial,sans-serif; color: var(--muted); }
+.book-excerpt summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+.excerpt-content { padding: 0 0 28px; }
+.excerpt-intro { color: var(--muted); font-style: italic; }
+.excerpt-content blockquote { margin: 26px 0; padding: 0 0 0 20px; border-left: 2px solid #b07a2a; font-size: 18px; line-height: 1.75; }
+.excerpt-content blockquote p { margin: 0 0 10px; }
