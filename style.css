@@ -594,3 +594,15 @@ footer a {
     margin-top: 30px;
   }
 }
+
+/* Language selector */
+header { gap: 18px; }
+.language-switcher { display: flex; gap: 5px; flex-shrink: 0; font-family: Arial, sans-serif; }
+.language-switcher a { padding: 7px 8px; border-radius: 5px; font-size: 12px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.language-switcher a:hover, .language-switcher a[aria-current="page"] { background: #eee2d2; color: var(--wine); }
+.language-switcher a[aria-current="page"] { font-weight: 700; }
+.language-switcher a:focus-visible { outline: 2px solid var(--wine); }
+.edition-note { color: var(--muted); font-size: 15px; font-style: italic; }
+@media (max-width: 1200px) { header { height: auto; min-height: 76px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; } header nav { order: 3; width: 100%; justify-content: center; gap: 22px; } }
+@media (max-width: 800px) { header nav { display: none; } .language-switcher { display: flex; } }
+@media (max-width: 420px) { header { gap: 8px; padding-left: 4vw; padding-right: 4vw; } .brand { font-size: 15px; } .language-switcher a { padding: 7px 5px; font-size: 11px; } }
