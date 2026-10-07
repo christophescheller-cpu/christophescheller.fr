@@ -548,5 +548,55 @@
 </footer>
 
 
+
+<style>
+.photo-expand { cursor: zoom-in; }
+.photo-expand:focus-visible { outline: 3px solid #761c1c; outline-offset: 5px; }
+.photo-viewer { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 96vh; overflow: visible; }
+.photo-viewer::backdrop { background: rgba(0,0,0,.88); }
+.photo-viewer img { display: block; width: auto; height: auto; max-width: 92vw; max-height: 86vh; object-fit: contain; margin: auto; }
+.photo-viewer-close { display: block; margin: 0 0 10px auto; padding: 8px 16px; border: 1px solid white; border-radius: 6px; background: #fff; color: #222; font: 16px Arial, sans-serif; cursor: pointer; }
+</style>
+<dialog class="photo-viewer" aria-label="Photo agrandie">
+  <button class="photo-viewer-close" type="button" autofocus>Fermer ×</button>
+  <img alt="">
+</dialog>
+<script>
+(() => {
+  const viewer = document.querySelector('.photo-viewer');
+  const enlarged = viewer.querySelector('img');
+  let source;
+  const open = (photo) => {
+    source = photo;
+    enlarged.src = photo.currentSrc || photo.src;
+    enlarged.alt = photo.alt;
+    viewer.showModal();
+    document.body.style.overflow = 'hidden';
+  };
+  document.querySelectorAll('main img').forEach((photo) => {
+    photo.classList.add('photo-expand');
+    photo.tabIndex = 0;
+    photo.setAttribute('role', 'button');
+    photo.setAttribute('aria-haspopup', 'dialog');
+    photo.setAttribute('aria-label', 'Agrandir : ' + (photo.alt || 'photo'));
+    photo.addEventListener('click', () => open(photo));
+    photo.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        open(photo);
+      }
+    });
+  });
+  viewer.querySelector('button').addEventListener('click', () => viewer.close());
+  viewer.addEventListener('click', (event) => {
+    if (event.target === viewer || event.target === enlarged) viewer.close();
+  });
+  viewer.addEventListener('close', () => {
+    document.body.style.overflow = '';
+    if (source) source.focus({ preventScroll: true });
+  });
+})();
+</script>
+
 </body>
 </html>
