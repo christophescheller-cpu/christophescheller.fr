@@ -623,3 +623,9 @@ header { gap: 18px; }
 .excerpt-intro { color: var(--muted); font-style: italic; }
 .excerpt-content blockquote { margin: 26px 0; padding: 0 0 0 20px; border-left: 2px solid #b07a2a; font-size: 18px; line-height: 1.75; }
 .excerpt-content blockquote p { margin: 0 0 10px; }
+
+/* La rencontre en aquarelles */
+.watercolour-section { background: #f7f2e9; scroll-margin-top: 140px; text-align: center; }
+.watercolour-figure { margin: 32px auto 0; max-width: 620px; }
+.watercolour-figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+@media (max-width: 800px) { .watercolour-figure { max-width: 100%; margin-top: 24px; } }
