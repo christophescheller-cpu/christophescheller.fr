@@ -676,3 +676,5 @@ header nav { flex-wrap: wrap; }
 
 /* Portrait du livre conservé en premier, nouveau portrait en complément */
 .author-secondary-portrait { margin: 30px auto 0; max-width: 220px; }
+
+.author img.author-mosaic { display: block; width: 100%; height: auto; border-radius: 6px; filter: none; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
