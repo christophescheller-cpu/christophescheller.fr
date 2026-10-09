@@ -666,3 +666,13 @@ header nav { flex-wrap: wrap; }
 .friendship-memory { max-width: 680px; margin: 42px auto 0; text-align: center; }
 .friendship-memory img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
 .friendship-memory figcaption { margin-top: 14px; color: var(--muted); font-size: 16px; font-style: italic; }
+
+/* Photos personnelles, présentées intégralement */
+.author img.author-new-portrait { border-radius: 8px; height: auto; filter: none; }
+.personal-photo { margin: 36px auto; width: 100%; }
+.personal-photo img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+.personal-walk { max-width: 300px; }
+.strawberry-memory { max-width: 280px; }
+
+/* Portrait du livre conservé en premier, nouveau portrait en complément */
+.author-secondary-portrait { margin: 30px auto 0; max-width: 220px; }
