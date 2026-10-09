@@ -695,3 +695,9 @@ header nav { flex-wrap: wrap; }
 
 
 @media (max-width: 360px) { .personal-polo img { height: auto; aspect-ratio: auto; } }
+
+/* Retours de lecteurs, dépliables comme les extraits */
+.reader-feedback-list { margin-top: 32px; }
+.reader-feedback .lecteurs-image { margin-top: 22px; }
+.reader-feedback-list .reader-feedback:last-child { border-bottom: 1px solid #ded5c8; }
+.father-feedback-image { max-width: 580px; }
