@@ -629,3 +629,14 @@ header { gap: 18px; }
 .watercolour-figure { margin: 32px auto 0; max-width: 620px; }
 .watercolour-figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
 @media (max-width: 800px) { .watercolour-figure { max-width: 100%; margin-top: 24px; } }
+
+/* Dossier d’auteur : Le projet */
+.project-section { background: #fbf8f2; scroll-margin-top: 140px; }
+.project-note { margin: 26px 0 32px; padding: 18px 22px; background: #f7f2e9; border-left: 3px solid var(--gold); color: var(--muted); font-size: 15px; }
+.project-note p { margin-top: 0; }
+.project-content { padding: 4px 0 24px; }
+.project-content p { line-height: 1.75; margin-bottom: 20px; overflow-wrap: break-word; }
+.project-subsection { margin-left: 16px; }
+.project-subsection summary { font-size: 20px; padding: 18px 0; }
+header nav { flex-wrap: wrap; }
+@media (max-width: 800px) { .project-subsection { margin-left: 0; } .project-subsection summary { font-size: 19px; } .project-note { padding: 16px; } }
