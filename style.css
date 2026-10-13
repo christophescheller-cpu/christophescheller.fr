@@ -819,3 +819,7 @@ header nav { flex-wrap: wrap; }
 .site-subcontent section.roman h2, .site-subcontent .author h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.2; overflow-wrap: break-word; }
 .site-subcontent section.distance h2 { font-size: clamp(25px, 3.5vw, 38px); color: #f8efe4; }
 .site-subcontent .full-book-cover img { width: 100%; height: auto; }
+
+/* Retours Facebook : présentation commune aux avis Amazon, sans note inventée */
+.facebook-review-source { margin: 0 0 10px; color: var(--muted); font: 12px/1.5 Arial,sans-serif; letter-spacing: .08em; }
+.facebook-review-note { font-size: 14px; color: var(--muted); }
