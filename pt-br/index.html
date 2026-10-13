@@ -21,7 +21,7 @@
 
   <link rel="canonical" href="https://christophescheller.fr/pt-br/">
 
-  <link rel="stylesheet" href="../style.css?v=20261013-complet">
+  <link rel="stylesheet" href="../style.css?v=20261013-rencontre">
 
   <script type="application/ld+json">
   {
@@ -380,10 +380,26 @@
   const viewer = document.querySelector('.photo-viewer');
   const enlarged = viewer.querySelector('img');
   let source;
+  const protectedSelector = '#rencontre img';
+  document.querySelectorAll(protectedSelector).forEach((photo) => {
+    photo.dataset.protectedPhoto = 'true';
+    photo.draggable = false;
+    photo.addEventListener('contextmenu', event => event.preventDefault());
+    photo.addEventListener('dragstart', event => event.preventDefault());
+  });
+  viewer.addEventListener('contextmenu', event => {
+    if (source && source.dataset.protectedPhoto === 'true') event.preventDefault();
+  });
+  enlarged.addEventListener('dragstart', event => {
+    if (source && source.dataset.protectedPhoto === 'true') event.preventDefault();
+  });
   const open = (photo) => {
     source = photo;
     enlarged.src = photo.currentSrc || photo.src;
     enlarged.alt = photo.alt;
+    const isProtected = photo.dataset.protectedPhoto === 'true';
+    enlarged.dataset.protectedPhoto = isProtected ? 'true' : 'false';
+    enlarged.draggable = !isProtected;
     viewer.showModal();
     document.body.style.overflow = 'hidden';
   };

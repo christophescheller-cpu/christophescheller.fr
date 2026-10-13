@@ -823,3 +823,11 @@ header nav { flex-wrap: wrap; }
 /* Retours Facebook : présentation commune aux avis Amazon, sans note inventée */
 .facebook-review-source { margin: 0 0 10px; color: var(--muted); font: 12px/1.5 Arial,sans-serif; letter-spacing: .08em; }
 .facebook-review-note { font-size: 14px; color: var(--muted); }
+
+/* Limiter l’enregistrement direct des portraits et cartes de Juliana */
+#rencontre img, .photo-viewer img[data-protected-photo="true"] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
