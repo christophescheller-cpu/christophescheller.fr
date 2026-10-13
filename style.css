@@ -831,3 +831,7 @@ header nav { flex-wrap: wrap; }
   user-select: none;
   -webkit-user-drag: none;
 }
+
+/* Squash : lecteur adapté à toutes les tailles d’écran */
+.squash-content { padding: 0 0 24px; }
+.squash-video { display: block; width: 100%; height: auto; border-radius: 6px; background: #151515; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
