@@ -262,6 +262,18 @@
   <figure class="friendship-memory"><img src="../assets/week-end-entre-amis.jpg" alt="Memories of a weekend with friends: celebrations, the ocean and the book, alongside a message about friendship." loading="lazy" width="1024" height="1536"><figcaption>Friends, the ocean and the joy of sharing</figcaption></figure></div>
 
 </section>
+<section id="musique" class="roman music-section" aria-labelledby="musique-title">
+  <div class="narrow">
+    <details class="music-chapter">
+      <summary><span id="musique-title">What I’m listening to at the moment</span></summary>
+      <div class="music-content">
+        <p class="music-intro">A few songs keeping me company these days.</p>
+        <div class="music-grid"><article class="music-card"><a href="https://open.spotify.com/track/4Kcr3yduAUK8I12XDemEXK" target="_blank" rel="noopener" aria-label="Listen on Spotify : Love teaches patience — YolcuBeats"><img class="music-cover" src="../assets/musique-4Kcr3yduAUK8I12XDemEXK.jpg" alt="" loading="lazy" width="300" height="300"><div class="music-card-copy"><h3>Love teaches patience</h3><p>YolcuBeats</p><span class="music-listen">Listen on Spotify <span aria-hidden="true">↗</span></span></div></a></article><article class="music-card"><a href="https://open.spotify.com/track/6uSYaLCAuaWaHQe57mioHH" target="_blank" rel="noopener" aria-label="Listen on Spotify : Café du matin — Éva Lenoir"><img class="music-cover" src="../assets/musique-6uSYaLCAuaWaHQe57mioHH.jpg" alt="" loading="lazy" width="300" height="300"><div class="music-card-copy"><h3>Café du matin</h3><p>Éva Lenoir</p><span class="music-listen">Listen on Spotify <span aria-hidden="true">↗</span></span></div></a></article><article class="music-card"><a href="https://open.spotify.com/track/0g30Wsmd7yshS7762iWdVv" target="_blank" rel="noopener" aria-label="Listen on Spotify : Relax — Deepest, AMHouse, Taylor Mosley"><img class="music-cover" src="../assets/musique-0g30Wsmd7yshS7762iWdVv.jpg" alt="" loading="lazy" width="300" height="300"><div class="music-card-copy"><h3>Relax</h3><p>Deepest, AMHouse, Taylor Mosley</p><span class="music-listen">Listen on Spotify <span aria-hidden="true">↗</span></span></div></a></article><article class="music-card"><a href="https://open.spotify.com/track/0sBbrOHKWgOF5IOcTlUktL" target="_blank" rel="noopener" aria-label="Listen on Spotify : You &amp; I — YolcuBeats"><img class="music-cover" src="../assets/musique-0sBbrOHKWgOF5IOcTlUktL.jpg" alt="" loading="lazy" width="300" height="300"><div class="music-card-copy"><h3>You &amp; I</h3><p>YolcuBeats</p><span class="music-listen">Listen on Spotify <span aria-hidden="true">↗</span></span></div></a></article><article class="music-card"><a href="https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet" target="_blank" rel="noopener" aria-label="Listen on Spotify : Apocalypse — Cigarettes After Sex"><img class="music-cover" src="../assets/musique-1oAwsWBovWRIp7qLMGPIet.jpg" alt="" loading="lazy" width="300" height="300"><div class="music-card-copy"><h3>Apocalypse</h3><p>Cigarettes After Sex</p><span class="music-listen">Listen on Spotify <span aria-hidden="true">↗</span></span></div></a></article></div>
+      </div>
+    </details>
+  </div>
+</section>
+
 
 
 
@@ -443,7 +455,7 @@
     viewer.showModal();
     document.body.style.overflow = 'hidden';
   };
-  document.querySelectorAll('main img').forEach((photo) => {
+  document.querySelectorAll('main img:not(.music-cover)').forEach((photo) => {
     photo.classList.add('photo-expand');
     photo.tabIndex = 0;
     photo.setAttribute('role', 'button');
