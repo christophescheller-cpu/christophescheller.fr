@@ -713,3 +713,11 @@ header nav { flex-wrap: wrap; }
 .amazon-review blockquote p:last-child { margin-bottom: 0; }
 .amazon-review-source { margin-top: 26px; }
 @media (max-width: 700px) { .amazon-review-grid { grid-template-columns: 1fr; } .amazon-review { padding: 20px; } }
+
+/* Nouveaux souvenirs : images entières, sans déformation */
+.favourite-memories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; margin: 42px 0; align-items: start; }
+.favourite-memory { margin: 0; min-width: 0; text-align: center; }
+.favourite-memory img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+.favourite-memory figcaption { margin-top: 12px; font-size: 16px; color: var(--muted); font-style: italic; }
+.favourite-paris { grid-column: 1 / -1; width: 100%; max-width: 620px; justify-self: center; }
+@media (max-width: 700px) { .favourite-memories { grid-template-columns: 1fr; gap: 28px; } }
