@@ -809,3 +809,13 @@ header nav { flex-wrap: wrap; }
 .reading-part > summary:hover { background: #f7f2e9; }
 .reading-part > summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
 .reading-part > .excerpt-content, .reading-part > .project-content { padding-top: 12px; }
+
+/* Couverture complète localisée, dans la présentation du roman */
+.full-book-cover { margin: 32px auto; max-width: 900px; text-align: center; }
+.full-book-cover img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,27,24,.12); }
+.full-book-cover figcaption { margin-top: 12px; color: var(--muted); font-size: 15px; font-style: italic; }
+
+/* Lisibilité des titres à l’intérieur des rubriques, notamment sur mobile */
+.site-subcontent section.roman h2, .site-subcontent .author h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.2; overflow-wrap: break-word; }
+.site-subcontent section.distance h2 { font-size: clamp(25px, 3.5vw, 38px); color: #f8efe4; }
+.site-subcontent .full-book-cover img { width: 100%; height: auto; }
