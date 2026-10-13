@@ -24,7 +24,7 @@ body {
 
 
 /* =========================
-   EN-TÃŠTE
+   EN-TÊTE
    ========================= */
 
 header {
@@ -83,7 +83,7 @@ nav a:focus-visible {
 
 
 /* =========================
-   Ã‰LÃ‰MENTS GÃ‰NÃ‰RAUX
+   ÉLÉMENTS GÉNÉRAUX
    ========================= */
 
 .eyebrow {
@@ -215,7 +215,7 @@ blockquote {
 
 
 /* =========================
-   PARIS / BRASÃLIA
+   PARIS / BRASÍLIA
    ========================= */
 
 .distance {
@@ -318,7 +318,7 @@ blockquote {
 }
 
 
-/* MosaÃ¯que */
+/* Mosaïque */
 
 .auteur-aime-grid {
   display: grid;
@@ -330,7 +330,7 @@ blockquote {
 
 
 /* Les deux compositions du haut
-   sont affichÃ©es intÃ©gralement */
+   sont affichées intégralement */
 
 .auteur-aime-grid img:nth-child(1),
 .auteur-aime-grid img:nth-child(2) {
@@ -453,7 +453,7 @@ blockquote {
 
 
 /* =========================
-   APPEL Ã€ L'ACTION
+   APPEL À L'ACTION
    ========================= */
 
 .cta {
@@ -576,7 +576,7 @@ footer a {
 
 
 /* =========================
-   PETITS Ã‰CRANS
+   PETITS ÉCRANS
    ========================= */
 
 @media (max-width: 700px) {
@@ -647,7 +647,7 @@ header { gap: 18px; }
 .watercolour-figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
 @media (max-width: 800px) { .watercolour-figure { max-width: 100%; margin-top: 24px; } }
 
-/* Dossier dâ€™auteur : Le projet */
+/* Dossier d’auteur : Le projet */
 .project-section { background: #fbf8f2; scroll-margin-top: 140px; }
 .project-note { margin: 26px 0 32px; padding: 18px 22px; background: #f7f2e9; border-left: 3px solid var(--gold); color: var(--muted); font-size: 15px; }
 .project-note p { margin-top: 0; }
@@ -679,24 +679,24 @@ header nav { flex-wrap: wrap; }
 .read-entry { flex-basis: 100%; margin-top: 8px; }
 @media (max-width: 600px) { .read-option { padding: 20px; } #pdf-frame { min-height: 350px; } }
 
-/* Souvenir dâ€™un week-end entre amis */
+/* Souvenir d’un week-end entre amis */
 .friendship-memory { max-width: 680px; margin: 42px auto 0; text-align: center; }
 .friendship-memory img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
 .friendship-memory figcaption { margin-top: 14px; color: var(--muted); font-size: 16px; font-style: italic; }
 
-/* Photos personnelles, prÃ©sentÃ©es intÃ©gralement */
+/* Photos personnelles, présentées intégralement */
 .personal-photo { margin: 36px auto; width: 100%; }
 .personal-photo img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
 .personal-polo { max-width: 300px; }
 .personal-polo img { aspect-ratio: 1; height: 300px; object-fit: cover; object-position: center; }
 .strawberry-memory { max-width: 280px; }
 
-/* Portrait du livre conservÃ© en premier, nouveau portrait en complÃ©ment */
+/* Portrait du livre conservé en premier, nouveau portrait en complément */
 
 
 @media (max-width: 360px) { .personal-polo img { height: auto; aspect-ratio: auto; } }
 
-/* Retours de lecteurs, dÃ©pliables comme les extraits */
+/* Retours de lecteurs, dépliables comme les extraits */
 .reader-feedback-list { margin-top: 32px; }
 .reader-feedback .lecteurs-image { margin-top: 22px; }
 .reader-feedback-list .reader-feedback:last-child { border-bottom: 1px solid #ded5c8; }
@@ -714,7 +714,7 @@ header nav { flex-wrap: wrap; }
 .amazon-review-source { margin-top: 26px; }
 @media (max-width: 700px) { .amazon-review-grid { grid-template-columns: 1fr; } .amazon-review { padding: 20px; } }
 
-/* Nouveaux souvenirs : images entiÃ¨res, sans dÃ©formation */
+/* Nouveaux souvenirs : images entières, sans déformation */
 .favourite-memories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; margin: 42px 0; align-items: start; }
 .favourite-memory { margin: 0; min-width: 0; text-align: center; }
 .favourite-memory img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
@@ -722,7 +722,7 @@ header nav { flex-wrap: wrap; }
 .favourite-paris { grid-column: 1 / -1; width: 100%; max-width: 620px; justify-self: center; }
 @media (max-width: 700px) { .favourite-memories { grid-template-columns: 1fr; gap: 28px; } }
 
-/* Ã€ Juliana : chapitre fermÃ© par dÃ©faut */
+/* À Juliana : chapitre fermé par défaut */
 .juliana-section { background: #fbf8f2; scroll-margin-top: 140px; }
 .juliana-chapter { border-top: 1px solid #ded5c8; border-bottom: 1px solid #ded5c8; }
 .juliana-chapter > summary { cursor: pointer; color: var(--wine); padding: 25px 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.3; }
@@ -795,12 +795,12 @@ header nav { flex-wrap: wrap; }
  .site-major > summary { padding: 25px 0; }
 }
 
-/* Contraste du passage Paris â€” BrasÃ­lia */
+/* Contraste du passage Paris — Brasília */
 .site-subcontent section.distance { background: #241b17; color: #f8efe4; padding: 36px 24px; margin-top: 30px; border-radius: 8px; }
 .site-subcontent .distance h2 { color: #f8efe4; font-size: clamp(25px, 3.5vw, 38px); }
 .site-subcontent .distance p { color: #d8b479; }
 
-/* TroisiÃ¨me niveau : extraits et analyses, fermÃ©s par dÃ©faut */
+/* Troisième niveau : extraits et analyses, fermés par défaut */
 .reading-part { margin: 16px 0; border-top: 1px solid #ded5c8; }
 .reading-part:last-child { border-bottom: 1px solid #ded5c8; }
 .reading-part > summary { padding: 20px 0; color: var(--wine); cursor: pointer; line-height: 1.4; }
@@ -809,8 +809,3 @@ header nav { flex-wrap: wrap; }
 .reading-part > summary:hover { background: #f7f2e9; }
 .reading-part > summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
 .reading-part > .excerpt-content, .reading-part > .project-content { padding-top: 12px; }
-
-/* Couverture complÃ¨te localisÃ©e, dans la prÃ©sentation du roman */
-.full-book-cover { margin: 32px auto; max-width: 900px; text-align: center; }
-.full-book-cover img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,27,24,.12); }
-.full-book-cover figcaption { margin-top: 12px; color: var(--muted); font-size: 15px; font-style: italic; }
