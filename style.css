@@ -835,3 +835,16 @@ header nav { flex-wrap: wrap; }
 /* Squash : lecteur adapté à toutes les tailles d’écran */
 .squash-content { padding: 0 0 24px; }
 .squash-video { display: block; width: 100%; height: auto; border-radius: 6px; background: #151515; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+
+/* Le retour de ma mère : citation traduite et texte fidèle au commentaire */
+.mother-feedback-card { max-width: 720px; margin: 16px auto; padding: 32px; border: 1px solid #ded5c8; border-radius: 8px; background: #f7f2e9; box-shadow: 0 8px 24px rgba(30,27,24,.05); }
+.mother-feedback-card blockquote { margin: 0 0 24px; color: var(--ink); font-size: clamp(18px, 2.2vw, 22px); line-height: 1.75; }
+.mother-feedback-card blockquote p { margin: 0 0 18px; }
+.mother-feedback-card blockquote p:last-child { margin-bottom: 0; color: var(--wine); }
+.mother-feedback-card figcaption { font: 14px/1.6 Arial, sans-serif; }
+.mother-feedback-card figcaption strong { color: var(--wine); }
+.mother-feedback-card figcaption span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
+@media (max-width: 600px) { .mother-feedback-card { padding: 22px 18px; } }
+
+.mother-feedback-image { max-width: 460px; margin: 20px auto 30px; }
+.mother-feedback-image figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: 15px; font-style: italic; }
