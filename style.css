@@ -848,3 +848,5 @@ header nav { flex-wrap: wrap; }
 
 .mother-feedback-image { max-width: 460px; margin: 20px auto 30px; }
 .mother-feedback-image figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: 15px; font-style: italic; }
+
+.reading-part[id] { scroll-margin-top: 160px; }
