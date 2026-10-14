@@ -850,3 +850,10 @@ header nav { flex-wrap: wrap; }
 .mother-feedback-image figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: 15px; font-style: italic; }
 
 .reading-part[id] { scroll-margin-top: 160px; }
+
+/* Les deux commentaires originaux de ma mère */
+.mother-feedback-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; margin: 20px auto 30px; max-width: 900px; align-items: start; }
+.mother-feedback-gallery .mother-feedback-image { width: 100%; max-width: none; margin: 0; }
+@media (max-width: 700px) { .mother-feedback-gallery { grid-template-columns: 1fr; max-width: 460px; gap: 28px; } }
+
+.mother-comment-title { margin: 0 0 20px; color: var(--wine); font-size: 22px; line-height: 1.35; font-weight: normal; }
