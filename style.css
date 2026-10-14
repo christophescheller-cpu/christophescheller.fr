@@ -857,3 +857,15 @@ header nav { flex-wrap: wrap; }
 @media (max-width: 700px) { .mother-feedback-gallery { grid-template-columns: 1fr; max-width: 460px; gap: 28px; } }
 
 .mother-comment-title { margin: 0 0 20px; color: var(--wine); font-size: 22px; line-height: 1.35; font-weight: normal; }
+
+/* Accès à la playlist complète */
+.music-playlist-actions { margin: 20px 0 32px; }
+.music-playlist-actions .button { border-radius: 5px; text-align: center; }
+.music-playlist-actions p { max-width: 680px; margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+@media (max-width: 480px) { .music-playlist-actions .button { display: block; width: 100%; } }
+
+/* Bannière originale de la playlist, cliquable vers Spotify */
+.music-playlist-banner { margin: 22px 0; }
+.music-playlist-banner a { display: block; border-radius: 6px; overflow: hidden; }
+.music-playlist-banner a:focus-visible { outline: 3px solid var(--wine); outline-offset: 5px; }
+.music-playlist-banner img { display: block; width: 100%; height: auto; aspect-ratio: auto; border-radius: 6px; }
