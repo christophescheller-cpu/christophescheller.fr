@@ -886,3 +886,76 @@ header nav { flex-wrap: wrap; }
 .author-note p.author-note-opening { color: var(--wine); font-size: 21px; }
 .author-note p.author-note-signature { margin-top: 28px; margin-bottom: 0; text-align: right; color: var(--wine); }
 @media (max-width: 700px) { .author-note { padding: 24px 7vw 36px; } .author-note p { font-size: 17px; } .author-note p.author-note-opening { font-size: 20px; } }
+
+/* =========================================
+   QUAND UNE HISTOIRE D'AMOUR DEVIENT
+   UNE RENAISSANCE
+   ========================================= */
+
+.renaissance {
+  padding: 90px 7vw 100px;
+  background: #f7f2e9;
+  color: #1e1b18;
+}
+
+.renaissance-inner {
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.renaissance h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 20px 0 32px;
+}
+
+.renaissance-question {
+  color: #761c1c;
+  font-size: clamp(21px, 2.5vw, 28px);
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 0 40px;
+}
+
+.renaissance-text p {
+  font-size: 19px;
+  line-height: 1.8;
+  margin: 0 0 24px;
+}
+
+.renaissance-transition {
+  color: #761c1c;
+  font-size: 22px !important;
+  font-style: italic;
+  margin: 36px 0 !important;
+}
+
+.renaissance-conclusion {
+  margin: 48px 0 0;
+  padding: 28px 0 0 24px;
+  border-top: 1px solid #d9cdbd;
+  border-left: 3px solid #b07a2a;
+  font-size: clamp(21px, 2.5vw, 27px);
+  line-height: 1.6;
+  color: #761c1c;
+}
+
+.renaissance-conclusion strong {
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .renaissance {
+    padding: 60px 22px 70px;
+  }
+
+  .renaissance-text p {
+    font-size: 17px;
+  }
+
+  .renaissance-conclusion {
+    padding-left: 18px;
+    margin-top: 35px;
+  }
+}
