@@ -973,3 +973,5 @@ header nav { flex-wrap: wrap; }
  .cover-history-grid { grid-template-columns: 1fr; gap: 24px; }
  .cover-history-card { padding: 20px; }
 }
+
+.cover-history-card p + p { margin-top: 18px; }

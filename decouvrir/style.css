@@ -1,0 +1,977 @@
+:root {
+  --ink: #1e1b18;
+  --paper: #f7f2e9;
+  --wine: #761c1c;
+  --gold: #b07a2a;
+  --muted: #746b62;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fbf8f2;
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.65;
+}
+
+
+/* =========================
+   EN-TÊTE
+   ========================= */
+
+header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  border-bottom: 1px solid #ded5c8;
+  background: rgba(251, 248, 242, .96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 18px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand span {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 14px;
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: color .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--wine);
+  background-color: #eee2d2;
+  box-shadow: inset 0 -2px 0 var(--wine);
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--wine);
+  outline-offset: 3px;
+}
+
+
+/* =========================
+   ÉLÉMENTS GÉNÉRAUX
+   ========================= */
+
+.eyebrow {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: .23em;
+  font-weight: 700;
+  color: var(--wine);
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid var(--wine);
+  color: var(--wine);
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: .04em;
+}
+
+.button.primary {
+  background: var(--wine);
+  color: white;
+}
+
+.narrow {
+  max-width: 790px;
+  margin: auto;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  grid-template-columns: 1.05fr .75fr;
+  gap: 7vw;
+  align-items: center;
+  padding: 70px 9vw 90px;
+  background:
+    radial-gradient(circle at 80% 30%, #f3dfbd 0, transparent 36%),
+    linear-gradient(135deg, #fbf8f2, #f5ede0);
+}
+
+h1 {
+  font-size: clamp(52px, 6vw, 90px);
+  margin: .2em 0 .35em;
+}
+
+h1 em {
+  color: var(--wine);
+  font-style: normal;
+}
+
+blockquote {
+  margin: 0 0 28px;
+  padding-left: 22px;
+  border-left: 2px solid var(--gold);
+  font-size: clamp(20px, 2vw, 27px);
+  font-style: italic;
+}
+
+.lead {
+  max-width: 680px;
+  font-size: 18px;
+  color: #4d463f;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+
+.cover-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.cover {
+  width: min(390px, 100%);
+  box-shadow: 0 30px 70px rgba(45, 31, 17, .28);
+  border-radius: 2px;
+}
+
+
+/* =========================
+   LE ROMAN
+   ========================= */
+
+.roman {
+  padding: 110px 8vw;
+  background: white;
+}
+
+.roman h2 {
+  font-size: clamp(34px, 4vw, 54px);
+  margin: .35em 0 .8em;
+}
+
+.roman p {
+  font-size: 19px;
+}
+
+.pivot {
+  font-size: 30px !important;
+  color: var(--wine);
+  font-style: italic;
+  margin: 1.2em 0;
+}
+
+.note {
+  border-top: 1px solid #d9cdbd;
+  margin-top: 42px;
+  padding-top: 28px;
+  color: #5c534b;
+}
+
+
+/* =========================
+   PARIS / BRASÍLIA
+   ========================= */
+
+.distance {
+  padding: 100px 8vw;
+  text-align: center;
+  background: #241b17;
+  color: #f8efe4;
+}
+
+.distance p {
+  font-family: Arial, sans-serif;
+  letter-spacing: .35em;
+  font-size: 12px;
+  color: #d8b479;
+}
+
+.distance p span {
+  margin: 0 15px;
+}
+
+.distance h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  font-style: italic;
+  max-width: 900px;
+  margin: 25px auto;
+}
+
+
+/* =========================
+   L'AUTEUR
+   ========================= */
+
+.author {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 70px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 110px 6vw;
+  align-items: start;
+}
+
+.author img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  filter: grayscale(10%);
+}
+
+.author h2 {
+  font-size: 48px;
+  margin: .15em 0 .55em;
+}
+
+.author p {
+  font-size: 18px;
+}
+
+.author-quote {
+  margin: 34px 0 22px;
+  font-size: 23px;
+  line-height: 1.55;
+  color: var(--wine);
+  font-style: normal;
+}
+
+.text-link {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--wine);
+  text-decoration: none;
+  border-bottom: 1px solid #c7a77b;
+  padding-bottom: 3px;
+}
+
+
+/* =========================
+   CE QUE L'AUTEUR AIME
+   ========================= */
+
+.auteur-aime {
+  padding: 90px 24px 100px;
+  background: var(--paper);
+}
+
+.auteur-aime .narrow {
+  max-width: 960px;
+}
+
+.auteur-aime h2 {
+  font-size: clamp(30px, 3.5vw, 44px);
+  margin: .35em 0 .6em;
+}
+
+.auteur-aime-intro {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* Mosaïque */
+
+.auteur-aime-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-top: 42px;
+  align-items: start;
+}
+
+
+/* Les deux compositions du haut
+   sont affichées intégralement */
+
+.auteur-aime-grid img:nth-child(1),
+.auteur-aime-grid img:nth-child(2) {
+  grid-column: span 3;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(30, 20, 10, .12);
+}
+
+
+/* Les trois images du bas */
+
+.auteur-aime-grid img:nth-child(3),
+.auteur-aime-grid img:nth-child(4),
+.auteur-aime-grid img:nth-child(5) {
+  grid-column: span 2;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(30, 20, 10, .12);
+}
+
+
+/* =========================
+   POURQUOI CE LIVRE
+   ========================= */
+
+.story {
+  padding: 110px 8vw;
+  background: #f1e9dd;
+}
+
+.story-inner {
+  max-width: 940px;
+  margin: auto;
+}
+
+.story h2 {
+  font-size: clamp(36px, 4.5vw, 60px);
+  margin: .3em 0 .85em;
+  max-width: 900px;
+}
+
+.story h2 em {
+  color: var(--wine);
+  font-style: italic;
+}
+
+.story-copy {
+  max-width: 760px;
+}
+
+.story-copy p {
+  font-size: 19px;
+}
+
+.story-opening {
+  font-size: 23px !important;
+}
+
+.story-question {
+  font-size: 28px !important;
+  line-height: 1.35;
+  font-style: italic;
+  color: var(--wine);
+  margin: 1.4em 0;
+}
+
+.rhythm {
+  margin: 1.6em 0;
+  font-size: 21px !important;
+}
+
+.story-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 38px;
+}
+
+
+/* =========================
+   PAROLES DE LECTEURS
+   ========================= */
+
+.lecteurs {
+  padding: 90px 24px;
+  background: var(--paper);
+}
+
+.lecteurs h2 {
+  margin-bottom: 24px;
+}
+
+.lecteurs-image {
+  max-width: 760px;
+  margin: 42px auto 28px;
+}
+
+.lecteurs-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 18px 45px rgba(30, 20, 10, .16);
+}
+
+.lecteurs-merci {
+  max-width: 700px;
+  margin: 28px auto 0;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   APPEL À L'ACTION
+   ========================= */
+
+.cta {
+  text-align: center;
+  padding: 100px 6vw;
+  background: var(--wine);
+  color: white;
+}
+
+.cta .eyebrow {
+  color: #e8c995;
+}
+
+.cta h2 {
+  font-size: clamp(40px, 5vw, 66px);
+  margin: .3em 0 .65em;
+}
+
+.button.light {
+  border-color: white;
+  color: white;
+}
+
+
+/* =========================
+   PIED DE PAGE
+   ========================= */
+
+footer {
+  padding: 50px 7vw;
+  background: #171411;
+  color: #eee;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 30px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+footer span {
+  display: block;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+footer a {
+  color: white;
+}
+
+.small {
+  color: #888;
+}
+
+
+/* =========================
+   TABLETTE / MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+
+  header {
+    padding: 0 5vw;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 7vw;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .cover-wrap {
+    order: 0;
+  }
+
+  .cover {
+    width: min(280px, 80vw);
+  }
+
+  .roman {
+    padding: 80px 7vw;
+  }
+
+  .distance {
+    padding: 80px 7vw;
+  }
+
+  .author {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .author img {
+    width: 190px;
+  }
+
+  .story {
+    padding: 80px 7vw;
+  }
+
+  .story-question {
+    font-size: 24px !important;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   PETITS ÉCRANS
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .auteur-aime {
+    padding: 60px 20px;
+  }
+
+  .auteur-aime-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .auteur-aime-grid img:nth-child(1),
+  .auteur-aime-grid img:nth-child(2),
+  .auteur-aime-grid img:nth-child(3),
+  .auteur-aime-grid img:nth-child(4),
+  .auteur-aime-grid img:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .lecteurs {
+    padding: 60px 20px;
+  }
+
+  .lecteurs-image {
+    margin-top: 30px;
+  }
+}
+
+/* Language selector */
+header { gap: 18px; }
+.language-switcher { display: flex; gap: 5px; flex-shrink: 0; font-family: Arial, sans-serif; }
+.language-switcher a { padding: 7px 8px; border-radius: 5px; font-size: 12px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.language-switcher a:hover, .language-switcher a[aria-current="page"] { background: #eee2d2; color: var(--wine); }
+.language-switcher a[aria-current="page"] { font-weight: 700; }
+.language-switcher a:focus-visible { outline: 2px solid var(--wine); }
+.edition-note { color: var(--muted); font-size: 15px; font-style: italic; }
+@media (max-width: 1350px) { header { height: auto; min-height: 76px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; } header nav { order: 3; width: 100%; justify-content: center; gap: 22px; } }
+@media (max-width: 800px) { header nav { display: none; } .language-switcher { display: flex; } }
+@media (max-width: 420px) { header { gap: 8px; padding-left: 4vw; padding-right: 4vw; } .brand { font-size: 15px; } .language-switcher a { padding: 7px 5px; font-size: 11px; } }
+
+.book-editions { margin-top: 22px; font-family: Arial, sans-serif; font-size: 13px; color: var(--muted); }
+.book-editions p { margin-bottom: 8px; }
+.edition-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.edition-links a { color: var(--wine); text-underline-offset: 4px; }
+
+.excerpts { scroll-margin-top: 140px; }
+.actions { flex-wrap: wrap; }
+.book-excerpt { border-top: 1px solid #ded5c8; margin-top: 18px; }
+.book-excerpt:last-child { border-bottom: 1px solid #ded5c8; }
+.book-excerpt summary { cursor: pointer; padding: 22px 0; color: var(--wine); font-size: 23px; line-height: 1.3; }
+.book-excerpt summary small { display: block; margin: 7px 0 0 22px; font: 12px Arial,sans-serif; color: var(--muted); }
+.book-excerpt summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+.excerpt-content { padding: 0 0 28px; }
+.excerpt-intro { color: var(--muted); font-style: italic; }
+.excerpt-content blockquote { margin: 26px 0; padding: 0 0 0 20px; border-left: 2px solid #b07a2a; font-size: 18px; line-height: 1.75; }
+.excerpt-content blockquote p { margin: 0 0 10px; }
+
+/* La rencontre en aquarelles */
+.watercolour-section { background: #f7f2e9; scroll-margin-top: 140px; text-align: center; }
+.watercolour-figure { margin: 32px auto 0; max-width: 620px; }
+.watercolour-figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+@media (max-width: 800px) { .watercolour-figure { max-width: 100%; margin-top: 24px; } }
+
+/* Dossier d’auteur : Le projet */
+.project-section { background: #fbf8f2; scroll-margin-top: 140px; }
+.project-note { margin: 26px 0 32px; padding: 18px 22px; background: #f7f2e9; border-left: 3px solid var(--gold); color: var(--muted); font-size: 15px; }
+.project-note p { margin-top: 0; }
+.project-content { padding: 4px 0 24px; }
+.project-content p { line-height: 1.75; margin-bottom: 20px; overflow-wrap: break-word; }
+.project-subsection { margin-left: 16px; }
+.project-subsection summary { font-size: 20px; padding: 18px 0; }
+header nav { flex-wrap: wrap; }
+@media (max-width: 800px) { .project-subsection { margin-left: 0; } .project-subsection summary { font-size: 19px; } .project-note { padding: 16px; } }
+
+/* Lire le livre */
+.read-book-section { background: #f7f2e9; scroll-margin-top: 150px; }
+.read-options { display: grid; gap: 24px; margin: 28px 0; }
+.read-option { padding: 26px; border: 1px solid #ded5c8; border-radius: 10px; background: #fffdf9; }
+.read-option h3 { margin-top: 0; color: var(--wine); font-size: 25px; font-weight: 400; }
+#read-pdf-form label { display: block; margin: 18px 0 7px; font: 15px Arial,sans-serif; }
+#read-pdf-form input:not([type=hidden]), #read-pdf-form textarea { width: 100%; padding: 12px; border: 1px solid #b8ac9c; border-radius: 5px; background: white; font: 17px Arial,sans-serif; color: var(--ink); }
+#read-pdf-form textarea { resize: vertical; }
+#read-pdf-form input:focus-visible, #read-pdf-form textarea:focus-visible, #read-pdf-form button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+#read-pdf-form button { cursor: pointer; }
+#read-pdf-form button:disabled { opacity: .55; cursor: not-allowed; }
+.pdf-pending { padding: 12px 16px; background: #f0e6d8; color: var(--muted); }
+.pdf-small { font-size: 14px; color: var(--muted); }
+.pdf-honeypot { display: none; }
+#pdf-reader { scroll-margin-top: 150px; }
+#pdf-reader[hidden], .pdf-pending[hidden] { display: none; }
+#pdf-frame { width: 100%; height: 80vh; min-height: 420px; border: 1px solid #ded5c8; background: white; }
+#pdf-request-status:empty { display: none; }
+.read-entry { flex-basis: 100%; margin-top: 8px; }
+@media (max-width: 600px) { .read-option { padding: 20px; } #pdf-frame { min-height: 350px; } }
+
+/* Souvenir d’un week-end entre amis */
+.friendship-memory { max-width: 680px; margin: 42px auto 0; text-align: center; }
+.friendship-memory img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+.friendship-memory figcaption { margin-top: 14px; color: var(--muted); font-size: 16px; font-style: italic; }
+
+/* Photos personnelles, présentées intégralement */
+.personal-photo { margin: 36px auto; width: 100%; }
+.personal-photo img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+.personal-polo { max-width: 300px; }
+.personal-polo img { aspect-ratio: 1; height: 300px; object-fit: cover; object-position: center; }
+.strawberry-memory { max-width: 280px; }
+
+/* Portrait du livre conservé en premier, nouveau portrait en complément */
+
+
+@media (max-width: 360px) { .personal-polo img { height: auto; aspect-ratio: auto; } }
+
+/* Retours de lecteurs, dépliables comme les extraits */
+.reader-feedback-list { margin-top: 32px; }
+.reader-feedback .lecteurs-image { margin-top: 22px; }
+.reader-feedback-list .reader-feedback:last-child { border-bottom: 1px solid #ded5c8; }
+.father-feedback-image { max-width: 580px; }
+
+/* Avis Amazon : cartes lisibles et traduites */
+.amazon-review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 26px 0; align-items: start; }
+.amazon-review { background: #fbf8f2; border: 1px solid #ded5c8; border-radius: 8px; padding: 24px; box-shadow: 0 6px 18px rgba(30,27,24,.04); overflow-wrap: break-word; }
+.amazon-review-author { margin: 0; font: 13px/1.5 Arial, sans-serif; color: var(--muted); }
+.amazon-review-stars { margin: 9px 0; color: #a76519; letter-spacing: .08em; font-size: 19px; }
+.amazon-review h3 { margin: 10px 0 18px; color: var(--wine); font-size: 21px; line-height: 1.35; font-weight: normal; }
+.amazon-review blockquote { margin: 0; padding: 0; border: 0; font-size: 17px; line-height: 1.7; }
+.amazon-review blockquote p { margin: 0 0 14px; }
+.amazon-review blockquote p:last-child { margin-bottom: 0; }
+.amazon-review-source { margin-top: 26px; }
+@media (max-width: 700px) { .amazon-review-grid { grid-template-columns: 1fr; } .amazon-review { padding: 20px; } }
+
+/* Nouveaux souvenirs : images entières, sans déformation */
+.favourite-memories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; margin: 42px 0; align-items: start; }
+.favourite-memory { margin: 0; min-width: 0; text-align: center; }
+.favourite-memory img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+.favourite-memory figcaption { margin-top: 12px; font-size: 16px; color: var(--muted); font-style: italic; }
+.favourite-paris { grid-column: 1 / -1; width: 100%; max-width: 620px; justify-self: center; }
+@media (max-width: 700px) { .favourite-memories { grid-template-columns: 1fr; gap: 28px; } }
+
+/* À Juliana : chapitre fermé par défaut */
+.juliana-section { background: #fbf8f2; scroll-margin-top: 140px; }
+.juliana-chapter { border-top: 1px solid #ded5c8; border-bottom: 1px solid #ded5c8; }
+.juliana-chapter > summary { cursor: pointer; color: var(--wine); padding: 25px 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.3; }
+.juliana-chapter > summary small { display: block; margin: 10px 0 0 28px; font: 14px/1.5 Arial, sans-serif; color: var(--muted); }
+.juliana-chapter > summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 5px; }
+.juliana-content { padding-bottom: 30px; }
+.juliana-quote { margin: 20px auto 34px; max-width: 680px; text-align: center; color: var(--wine); }
+.juliana-quote p { font-size: 22px; line-height: 1.6; }
+.juliana-quote cite { color: var(--muted); font-size: 13px; }
+.juliana-photo { margin: 0; min-width: 0; text-align: center; }
+.juliana-photo img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+.juliana-photo figcaption { margin-top: 12px; color: var(--muted); font-size: 15px; font-style: italic; }
+.juliana-hero { max-width: 535px; margin: 0 auto 38px; }
+.juliana-gallery, .juliana-cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 22px; align-items: start; }
+.juliana-birthday { margin-top: 40px; }
+.juliana-cards { margin: 20px 0; }
+.juliana-card-note { color: var(--muted); font-size: 14px; }
+.juliana-card-message { max-width: 650px; margin: 26px auto 0; border-left: 2px solid var(--gold); padding-left: 22px; font-size: 18px; }
+@media (max-width: 600px) { .juliana-gallery, .juliana-cards { grid-template-columns: 1fr; } .juliana-quote p { font-size: 19px; } }
+
+/* Chansons du moment : pochettes et liens Spotify */
+.music-section { background: var(--paper); scroll-margin-top: 140px; }
+.music-chapter { border-top: 1px solid #ded5c8; border-bottom: 1px solid #ded5c8; }
+.music-chapter > summary { padding: 25px 0; color: var(--wine); cursor: pointer; font-size: clamp(27px,4vw,40px); line-height: 1.3; }
+.music-chapter > summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 5px; }
+.music-content { padding-bottom: 30px; }
+.music-intro { margin: 10px 0 28px; font-size: 18px; color: var(--muted); }
+.music-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; align-items: start; }
+.music-card { min-width: 0; background: #fbf8f2; border-radius: 8px; overflow: hidden; border: 1px solid #ded5c8; }
+.music-card a { display: block; height: 100%; text-decoration: none; color: var(--ink); }
+.music-card a:hover { background: #eee2d2; }
+.music-card a:focus-visible { outline: 3px solid var(--wine); outline-offset: -3px; }
+.music-cover { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.music-card-copy { padding: 18px; }
+.music-card h3 { margin: 0 0 7px; font-size: 21px; line-height: 1.35; font-weight: normal; color: var(--wine); overflow-wrap: break-word; }
+.music-card p { margin: 0 0 18px; font: 13px/1.5 Arial,sans-serif; color: var(--muted); }
+.music-listen { font: 13px/1.5 Arial,sans-serif; color: var(--wine); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 800px) { .music-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 480px) { .music-grid { grid-template-columns: 1fr; max-width: 320px; margin: auto; } }
+
+/* Navigation du contenu : deux niveaux repliables */
+.site-chapters { max-width: 1100px; margin: 0 auto; padding: 20px 6vw 80px; }
+.site-chapter { scroll-margin-top: 160px; border-top: 1px solid #ded5c8; }
+.site-chapter:last-child { border-bottom: 1px solid #ded5c8; }
+.site-major > summary { cursor: pointer; padding: 30px 0; color: var(--wine); }
+.site-major > summary h2 { display: inline; font-size: clamp(26px,3.5vw,38px); line-height: 1.3; }
+.chapter-number { font: 13px Arial,sans-serif; color: var(--gold); margin: 0 16px 0 6px; }
+.site-major-content { padding: 0 0 28px 28px; }
+.site-subchapter { border-top: 1px solid #e4dbcf; scroll-margin-top: 160px; }
+.site-subchapter > summary { padding: 20px 0; cursor: pointer; color: var(--ink); }
+.site-subchapter > summary h3 { display: inline; font-size: clamp(19px,2.5vw,24px); font-weight: normal; line-height: 1.4; }
+.site-major > summary:hover, .site-subchapter > summary:hover { color: var(--wine); background: #f7f2e9; }
+.site-major > summary:focus-visible, .site-subchapter > summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+.site-subcontent { padding: 12px 0 34px; }
+.site-subcontent section { padding: 0; background: transparent; max-width: none; }
+.site-subcontent .narrow { max-width: none; }
+.site-subcontent .author { grid-template-columns: 240px minmax(0,1fr); gap: 40px; }
+.site-subcontent .auteur-aime { padding: 0; }
+.site-subcontent .story h2 { font-size: clamp(26px,3.5vw,40px); }
+.site-subcontent .distance { padding: 32px 0 0; margin-top: 30px; }
+.reading-block { margin: 30px 0; }
+.reading-title { color: var(--wine); font-size: 23px; font-weight: normal; line-height: 1.4; margin-bottom: 10px; }
+.reading-subtitle { margin-top: 0; color: var(--muted); font: 13px/1.5 Arial,sans-serif; }
+.reading-block .excerpt-content blockquote { font-size: 18px; }
+@media (max-width: 700px) {
+ .site-chapters { padding: 12px 7vw 55px; }
+ .site-major-content { padding-left: 10px; }
+ .chapter-number { margin-right: 8px; }
+ .site-subcontent .author { grid-template-columns: 1fr; gap: 25px; }
+ .site-major > summary { padding: 25px 0; }
+}
+
+/* Contraste du passage Paris — Brasília */
+.site-subcontent section.distance { background: #241b17; color: #f8efe4; padding: 36px 24px; margin-top: 30px; border-radius: 8px; }
+.site-subcontent .distance h2 { color: #f8efe4; font-size: clamp(25px, 3.5vw, 38px); }
+.site-subcontent .distance p { color: #d8b479; }
+
+/* Troisième niveau : extraits et analyses, fermés par défaut */
+.reading-part { margin: 16px 0; border-top: 1px solid #ded5c8; }
+.reading-part:last-child { border-bottom: 1px solid #ded5c8; }
+.reading-part > summary { padding: 20px 0; color: var(--wine); cursor: pointer; line-height: 1.4; }
+.reading-part > summary .reading-title { display: inline; margin: 0; font-size: 21px; }
+.reading-part > summary small { display: block; margin: 8px 0 0 22px; color: var(--muted); font: 13px/1.5 Arial,sans-serif; }
+.reading-part > summary:hover { background: #f7f2e9; }
+.reading-part > summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+.reading-part > .excerpt-content, .reading-part > .project-content { padding-top: 12px; }
+
+/* Couverture complète localisée, dans la présentation du roman */
+.full-book-cover { margin: 32px auto; max-width: 900px; text-align: center; }
+.full-book-cover img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,27,24,.12); }
+.full-book-cover figcaption { margin-top: 12px; color: var(--muted); font-size: 15px; font-style: italic; }
+
+/* Lisibilité des titres à l’intérieur des rubriques, notamment sur mobile */
+.site-subcontent section.roman h2, .site-subcontent .author h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.2; overflow-wrap: break-word; }
+.site-subcontent section.distance h2 { font-size: clamp(25px, 3.5vw, 38px); color: #f8efe4; }
+.site-subcontent .full-book-cover img { width: 100%; height: auto; }
+
+/* Retours Facebook : présentation commune aux avis Amazon, sans note inventée */
+.facebook-review-source { margin: 0 0 10px; color: var(--muted); font: 12px/1.5 Arial,sans-serif; letter-spacing: .08em; }
+.facebook-review-note { font-size: 14px; color: var(--muted); }
+
+/* Limiter l’enregistrement direct des portraits et cartes de Juliana */
+#rencontre img, .photo-viewer img[data-protected-photo="true"] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Squash : lecteur adapté à toutes les tailles d’écran */
+.squash-content { padding: 0 0 24px; }
+.squash-video { display: block; width: 100%; height: auto; border-radius: 6px; background: #151515; box-shadow: 0 10px 30px rgba(30,27,24,.10); }
+
+/* Le retour de ma mère : citation traduite et texte fidèle au commentaire */
+.mother-feedback-card { max-width: 720px; margin: 16px auto; padding: 32px; border: 1px solid #ded5c8; border-radius: 8px; background: #f7f2e9; box-shadow: 0 8px 24px rgba(30,27,24,.05); }
+.mother-feedback-card blockquote { margin: 0 0 24px; color: var(--ink); font-size: clamp(18px, 2.2vw, 22px); line-height: 1.75; }
+.mother-feedback-card blockquote p { margin: 0 0 18px; }
+.mother-feedback-card blockquote p:last-child { margin-bottom: 0; color: var(--wine); }
+.mother-feedback-card figcaption { font: 14px/1.6 Arial, sans-serif; }
+.mother-feedback-card figcaption strong { color: var(--wine); }
+.mother-feedback-card figcaption span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
+@media (max-width: 600px) { .mother-feedback-card { padding: 22px 18px; } }
+
+.mother-feedback-image { max-width: 460px; margin: 20px auto 30px; }
+.mother-feedback-image figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: 15px; font-style: italic; }
+
+.reading-part[id] { scroll-margin-top: 160px; }
+
+/* Les deux commentaires originaux de ma mère */
+.mother-feedback-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; margin: 20px auto 30px; max-width: 900px; align-items: start; }
+.mother-feedback-gallery .mother-feedback-image { width: 100%; max-width: none; margin: 0; }
+@media (max-width: 700px) { .mother-feedback-gallery { grid-template-columns: 1fr; max-width: 460px; gap: 28px; } }
+
+.mother-comment-title { margin: 0 0 20px; color: var(--wine); font-size: 22px; line-height: 1.35; font-weight: normal; }
+
+/* Accès à la playlist complète */
+.music-playlist-actions { margin: 20px 0 32px; }
+.music-playlist-actions .button { border-radius: 5px; text-align: center; }
+.music-playlist-actions p { max-width: 680px; margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+@media (max-width: 480px) { .music-playlist-actions .button { display: block; width: 100%; } }
+
+/* Bannière originale de la playlist, cliquable vers Spotify */
+.music-playlist-banner { margin: 22px 0; }
+.music-playlist-banner a { display: block; border-radius: 6px; overflow: hidden; }
+.music-playlist-banner a:focus-visible { outline: 3px solid var(--wine); outline-offset: 5px; }
+.music-playlist-banner img { display: block; width: 100%; height: auto; aspect-ratio: auto; border-radius: 6px; }
+
+/* Reprise et traduction des deux retours professionnels */
+.professional-feedback-card { max-width: 760px; margin: 30px auto; padding: 28px; background: #f7f2e9; border: 1px solid #ded5c8; border-radius: 8px; }
+.professional-feedback-card h4 { margin: 0 0 22px; color: var(--wine); font-size: 23px; font-weight: normal; line-height: 1.4; }
+.professional-feedback-card blockquote { margin: 0; color: var(--ink); font-size: 18px; line-height: 1.75; }
+.professional-feedback-card blockquote p { margin: 0 0 18px; }
+.professional-feedback-card blockquote p:last-child { margin-bottom: 0; }
+@media (max-width: 600px) { .professional-feedback-card { padding: 22px 18px; } }
+
+/* Courte note de l’auteur, visible avant les cinq grandes rubriques */
+.author-note { max-width: 1100px; margin: 0 auto; padding: 42px 6vw 48px; }
+.author-note-inner { max-width: 800px; margin: 0 auto; padding-top: 32px; border-top: 1px solid #ded5c8; }
+.author-note h2 { margin: 0 0 28px; color: var(--wine); font-size: clamp(27px,3.5vw,36px); line-height: 1.25; }
+.author-note p { margin: 0 0 20px; font-size: 18px; line-height: 1.8; }
+.author-note p.author-note-opening { color: var(--wine); font-size: 21px; }
+.author-note p.author-note-signature { margin-top: 28px; margin-bottom: 0; text-align: right; color: var(--wine); }
+@media (max-width: 700px) { .author-note { padding: 24px 7vw 36px; } .author-note p { font-size: 17px; } .author-note p.author-note-opening { font-size: 20px; } }
+
+/* =========================================
+   QUAND UNE HISTOIRE D'AMOUR DEVIENT
+   UNE RENAISSANCE
+   ========================================= */
+
+.renaissance {
+  padding: 90px 7vw 100px;
+  background: #f7f2e9;
+  color: #1e1b18;
+}
+
+.renaissance-inner {
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.renaissance h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 20px 0 32px;
+}
+
+.renaissance-question {
+  color: #761c1c;
+  font-size: clamp(21px, 2.5vw, 28px);
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 0 40px;
+}
+
+.renaissance-text p {
+  font-size: 19px;
+  line-height: 1.8;
+  margin: 0 0 24px;
+}
+
+.renaissance-transition {
+  color: #761c1c;
+  font-size: 22px !important;
+  font-style: italic;
+  margin: 36px 0 !important;
+}
+
+.renaissance-conclusion {
+  margin: 48px 0 0;
+  padding: 28px 0 0 24px;
+  border-top: 1px solid #d9cdbd;
+  border-left: 3px solid #b07a2a;
+  font-size: clamp(21px, 2.5vw, 27px);
+  line-height: 1.6;
+  color: #761c1c;
+}
+
+.renaissance-conclusion strong {
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .renaissance {
+    padding: 60px 22px 70px;
+  }
+
+  .renaissance-text p {
+    font-size: 17px;
+  }
+
+  .renaissance-conclusion {
+    padding-left: 18px;
+    margin-top: 35px;
+  }
+}
+
+/* Les couvertures dans le temps */
+.cover-history { color: var(--ink); }
+.cover-history-intro { max-width: 780px; font-size: 18px; line-height: 1.8; }
+.cover-history-hint { margin: 12px 0 28px; color: var(--muted); font: 14px/1.6 Arial, sans-serif; }
+.cover-history-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+.cover-history-card { min-width: 0; padding: 24px; border: 1px solid #e4dbcf; border-radius: 8px; background: #fffaf3; }
+.cover-history-card h4 { margin: 0 0 22px; color: var(--wine); font-size: 22px; line-height: 1.4; font-weight: normal; }
+.cover-history-card img { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto 24px; box-shadow: 0 8px 24px rgba(45, 30, 20, .12); }
+.cover-history-card p { margin: 0; font-size: 17px; line-height: 1.8; }
+@media (max-width: 650px) {
+ .cover-history-grid { grid-template-columns: 1fr; gap: 24px; }
+ .cover-history-card { padding: 20px; }
+}
+
+.cover-history-card p + p { margin-top: 18px; }
