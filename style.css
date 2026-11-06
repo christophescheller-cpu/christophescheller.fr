@@ -975,3 +975,10 @@ header nav { flex-wrap: wrap; }
 }
 
 .cover-history-card p + p { margin-top: 18px; }
+
+/* Un roman qui continue de grandir */
+.novel-growth { max-width: 780px; margin: 0 auto; color: var(--ink); }
+.novel-growth h4 { margin: 0 0 16px; color: var(--wine); font-size: clamp(24px, 3vw, 32px); line-height: 1.35; font-weight: normal; }
+.novel-growth h5 { margin: 36px 0 18px; color: var(--wine); font-size: clamp(21px, 2.5vw, 25px); line-height: 1.4; font-weight: normal; }
+.novel-growth p { font-size: 18px; line-height: 1.8; }
+@media (max-width: 650px) { .novel-growth p { font-size: 17px; } }
