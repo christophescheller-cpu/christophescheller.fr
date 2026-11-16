@@ -982,3 +982,7 @@ header nav { flex-wrap: wrap; }
 .novel-growth h5 { margin: 36px 0 18px; color: var(--wine); font-size: clamp(21px, 2.5vw, 25px); line-height: 1.4; font-weight: normal; }
 .novel-growth p { font-size: 18px; line-height: 1.8; }
 @media (max-width: 650px) { .novel-growth p { font-size: 17px; } }
+
+/* Cinquième couverture : présentation complète du livre */
+.cover-history-final { grid-column: 1 / -1; }
+.cover-history-card.cover-history-final img { max-width: 900px; width: 100%; height: auto; }
