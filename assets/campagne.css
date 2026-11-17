@@ -56,3 +56,5 @@ h2 { font-size:clamp(28px,3.5vw,38px); margin:0 0 24px; }
  .campaign-author img { width:120px; }
 }
 @media (max-width:420px) { .campaign-actions .campaign-button { width:100%; } .campaign-header { flex-wrap:wrap; } }
+
+.campaign-cover.current-cover-frame { aspect-ratio: 0.6727; }
